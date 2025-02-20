@@ -337,6 +337,7 @@ class LFSRDataset(torch.utils.data.Dataset):
     for path in paths:
       files.extend(sorted(glob.glob(f'{path}/**/*.h5', recursive=True)))
       files.extend(sorted(glob.glob(f'{path}/**/*.mat', recursive=True)))
+    print(f"Found files: {files}")  # Debug line
 
     # preprocess
     self.cache = {}
